@@ -1,0 +1,11 @@
+# Copyright (C) 2026 Shaper Tools
+# SPDX-License-Identifier: LGPL-2.1-only
+
+[Unit]
+Description=Connectivity manager
+
+[Service]
+ExecStart=@CONNECTIVITY_LAUNCHER@
+Restart=on-failure
+Type=dbus
+BusName=com.shapertools.qdbussys.connectivityd

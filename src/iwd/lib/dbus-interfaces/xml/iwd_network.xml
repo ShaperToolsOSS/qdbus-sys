@@ -1,0 +1,14 @@
+<!--
+Copyright (C) 2026 Shaper Tools
+SPDX-License-Identifier: LGPL-2.1-only
+-->
+
+	<interface name="net.connman.iwd.Network">
+		<method name="Connect">
+		</method>
+		<property name="Name" type="s" access="read"/>
+		<property name="Connected" type="b" access="read"/>
+		<property name="Device" type="o" access="read"/>
+		<property name="Type" type="s" access="read"/>
+		<property name="KnownNetwork" type="o" access="read"/>
+	</interface>

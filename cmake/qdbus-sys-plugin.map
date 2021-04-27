@@ -1,0 +1,12 @@
+/* Copyright (C) 2026 Shaper Tools
+ * SPDX-License-Identifier: LGPL-2.1-only
+ *
+ * QML plugins are loaded by Qt and export only its plugin entry points.
+ */
+{
+  global:
+    qt_plugin_instance;
+    qt_plugin_query_metadata_v2;
+  local:
+    *;
+};

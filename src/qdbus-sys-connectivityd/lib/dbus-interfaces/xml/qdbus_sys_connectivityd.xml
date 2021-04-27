@@ -1,0 +1,16 @@
+<!--
+Copyright (C) 2026 Shaper Tools
+SPDX-License-Identifier: LGPL-2.1-only
+-->
+
+<interface name="com.shapertools.qdbussys.connectivityd1">
+ <property name="connected" type="b" access="read">
+ </property>
+ <property name="checkingConnectivity" type="b" access="read">
+ </property>
+ <property name="connectivityLevel" type="i" access="read">
+ </property>
+ <method name="checkConnectivity">
+ </method>
+ <!-- Changes are announced with org.freedesktop.DBus.Properties.PropertiesChanged. -->
+</interface>

@@ -1,0 +1,20 @@
+<!--
+Copyright (C) 2026 Shaper Tools
+SPDX-License-Identifier: LGPL-2.1-only
+-->
+
+<interface name="org.freedesktop.DBus.ObjectManager">
+	<method name="GetManagedObjects">
+		<arg name="objpath_interfaces_and_properties" type="a{oa{sa{sv}}}" direction="out"/>
+        <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="ManagedObjectList"/>
+	</method>
+	<signal name="InterfacesAdded">
+		<arg name="object_path" type="o"/>
+		<arg name="interfaces_and_properties" type="a{sa{sv}}"/>
+        <annotation name="org.qtproject.QtDBus.QtTypeName.Out1" value="InterfacePropertyMap"/>
+	</signal>
+	<signal name="InterfacesRemoved">
+		<arg name="object_path" type="o"/>
+		<arg name="interfaces" type="as"/>
+	</signal>
+</interface>

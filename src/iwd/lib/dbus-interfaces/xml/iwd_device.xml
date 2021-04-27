@@ -1,0 +1,12 @@
+<!--
+Copyright (C) 2026 Shaper Tools
+SPDX-License-Identifier: LGPL-2.1-only
+-->
+
+	<interface name="net.connman.iwd.Device">
+		<property name="Name" type="s" access="read"/>
+		<property name="Address" type="s" access="read"/>
+		<property name="Powered" type="b" access="readwrite"/>
+		<property name="Adapter" type="o" access="read"/>
+		<property name="Mode" type="s" access="readwrite"/>
+	</interface>

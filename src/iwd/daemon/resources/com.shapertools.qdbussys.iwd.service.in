@@ -1,0 +1,8 @@
+# Copyright (C) 2026 Shaper Tools
+# SPDX-License-Identifier: LGPL-2.1-only
+
+[D-BUS Service]
+Name=com.shapertools.qdbussys.iwd
+Exec=@QIWD_EXECUTABLE@
+User=root
+SystemdService=qdbus-sys-iwd.service

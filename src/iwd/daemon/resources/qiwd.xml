@@ -1,0 +1,31 @@
+<!--
+Copyright (C) 2026 Shaper Tools
+SPDX-License-Identifier: LGPL-2.1-only
+-->
+
+<node>
+  <interface name="com.shapertools.qdbussys.iwd1">
+    <!-- Full state; SnapshotDelta signals describe each later change. -->
+    <method name="GetSnapshot"><arg direction="out" type="a{sv}" name="snapshot"/></method>
+    <method name="Request">
+      <arg direction="in" type="s" name="client"/><arg direction="in" type="s" name="operation"/>
+      <arg direction="in" type="s" name="device"/><arg direction="in" type="s" name="action"/>
+      <arg direction="in" type="a{sv}" name="arguments"/>
+    </method>
+    <method name="Cancel"><arg direction="in" type="s" name="client"/><arg direction="in" type="s" name="operation"/></method>
+    <method name="ProvideCredentials">
+      <arg direction="in" type="s" name="client"/><arg direction="in" type="s" name="operation"/><arg direction="in" type="s" name="passphrase"/>
+    </method>
+    <method name="ReleaseClient"><arg direction="in" type="s" name="client"/></method>
+    <!-- version, epoch, revision, baseRevision; changes (top-level keys);
+         deviceChanges (device -> changed keys); replacedDevices (device -> full
+         state); removedDevices. Apply only when baseRevision is the current
+         revision; otherwise call GetSnapshot. -->
+    <signal name="SnapshotDelta"><arg type="a{sv}" name="delta"/></signal>
+    <signal name="OperationFinished">
+      <arg type="s" name="client"/><arg type="s" name="operation"/><arg type="b" name="success"/>
+      <arg type="s" name="errorName"/><arg type="s" name="message"/>
+    </signal>
+    <signal name="CredentialsRequested"><arg type="s" name="client"/><arg type="s" name="operation"/><arg type="s" name="networkId"/></signal>
+  </interface>
+</node>

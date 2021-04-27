@@ -1,0 +1,13 @@
+<!--
+Copyright (C) 2026 Shaper Tools
+SPDX-License-Identifier: LGPL-2.1-only
+-->
+
+<interface name="net.connman.iwd.AgentManager">
+		<method name="RegisterAgent">
+			<arg name="path" type="o" direction="in"/>
+		</method>
+		<method name="UnregisterAgent">
+			<arg name="path" type="o" direction="in"/>
+		</method>
+</interface>

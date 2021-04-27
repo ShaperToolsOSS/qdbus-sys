@@ -1,0 +1,13 @@
+<!--
+Copyright (C) 2026 Shaper Tools
+SPDX-License-Identifier: LGPL-2.1-only
+-->
+
+<interface name="net.connman.iwd.p2p.ServiceManager">
+		<method name="RegisterDisplayService">
+			<arg name="properties" type="a{sv}" direction="in"/>
+            <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="QVariantMap"/>
+		</method>
+		<method name="UnregisterDisplayService">
+		</method>
+</interface>

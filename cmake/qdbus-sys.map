@@ -1,0 +1,21 @@
+/* Copyright (C) 2026 Shaper Tools
+ * SPDX-License-Identifier: LGPL-2.1-only
+ *
+ * Exported interface of the public libraries: the QDBusSys classes marked
+ * QDBUS_SYS_EXPORT, and the QML type registration their plugins call.
+ * Everything else, including template instantiations from libstdc++ (which
+ * forces default visibility), stays local.
+ */
+QDBUS_SYS_1 {
+  global:
+    /* Quoted names would match literally, so "?" stands in for spaces. */
+    extern "C++" {
+      QDBusSys::*;
+      vtable?for?QDBusSys::*;
+      typeinfo?for?QDBusSys::*;
+      typeinfo?name?for?QDBusSys::*;
+      qml_register_types_*;
+    };
+  local:
+    *;
+};

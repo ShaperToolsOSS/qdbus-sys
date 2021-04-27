@@ -1,0 +1,11 @@
+# Copyright (C) 2026 Shaper Tools
+# SPDX-License-Identifier: LGPL-2.1-only
+
+[Unit]
+Description=Shared Qt IWD state and operation broker
+
+[Service]
+Type=dbus
+BusName=com.shapertools.qdbussys.iwd
+ExecStart=@QIWD_EXECUTABLE@
+Restart=on-failure

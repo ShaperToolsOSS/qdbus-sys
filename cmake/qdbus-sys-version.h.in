@@ -1,0 +1,15 @@
+// Copyright (C) 2026 Shaper Tools
+// SPDX-License-Identifier: LGPL-2.1-only
+
+#pragma once
+
+// Generated from the CMake project version. These describe the build headers,
+// not whichever shared library happens to be loaded at runtime.
+#define QDBUS_SYS_VERSION_MAJOR @PROJECT_VERSION_MAJOR@
+#define QDBUS_SYS_VERSION_MINOR @PROJECT_VERSION_MINOR@
+#define QDBUS_SYS_VERSION_PATCH @PROJECT_VERSION_PATCH@
+#define QDBUS_SYS_VERSION_STR "@PROJECT_VERSION@"
+#define QDBUS_SYS_VERSION_CHECK(major, minor, patch) \
+    (((major) << 16) | ((minor) << 8) | (patch))
+#define QDBUS_SYS_VERSION \
+    QDBUS_SYS_VERSION_CHECK(QDBUS_SYS_VERSION_MAJOR, QDBUS_SYS_VERSION_MINOR, QDBUS_SYS_VERSION_PATCH)
